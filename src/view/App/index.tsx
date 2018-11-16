@@ -1,22 +1,23 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Draft from '../Draft';
-import Home from '../Home';
 import { Background } from './styled';
 
-const App = () => (
-  <Suspense fallback={null}>
-    <BrowserRouter>
-      <div>
-        <Background />
+const LazyHome = React.lazy(() => import('../Home'));
+const LazyDraft = React.lazy(() => import('../Draft'));
 
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Background />
+
+      <Suspense fallback={null}>
         <Switch>
-          <Route component={Draft} path="/draft" />
-          <Route component={Home} path="*" />
+          <Route component={LazyDraft} path="/draft" />
+          <Route component={LazyHome} path="*" />
         </Switch>
-      </div>
-    </BrowserRouter>
-  </Suspense>
+      </Suspense>
+    </div>
+  </BrowserRouter>
 );
 
 export default App;

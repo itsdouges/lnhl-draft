@@ -1,7 +1,6 @@
 import React from 'react';
 import Baba, { Target, ConcealMove } from 'yubaba';
-import * as Styled from './styled';
-import { Page, ListItem, Logo } from '../common/Elements';
+import { Page, ListItemHeader, Logo } from '../common/Elements';
 
 const Draft = () => (
   <Baba name="reveal-draft">
@@ -11,11 +10,11 @@ const Draft = () => (
           <header>
             <Target>
               {target => (
-                <ListItem {...target}>
+                <ListItemHeader {...target}>
                   <Logo />
 
                   <h1>LNHL Draft</h1>
-                </ListItem>
+                </ListItemHeader>
               )}
             </Target>
           </header>

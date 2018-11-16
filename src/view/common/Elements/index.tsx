@@ -4,11 +4,20 @@ import { Link, LinkProps } from 'react-router-dom';
 import * as grid from '../../styles/grid';
 import * as colors from '../../styles/colors';
 
+/**
+ * Use a ListItemHeader at the top of a Page.
+ */
 export const Page = styled.main`
   height: 100vh;
   width: 100vw;
   position: relative;
   background-color: ${colors.pageBackground};
+
+  :after {
+    display: block;
+    height: ${grid.multiple(10).px};
+    content: '';
+  }
 `;
 
 export const ListItem = styled.div`
@@ -18,6 +27,11 @@ export const ListItem = styled.div`
   padding: ${grid.multiple(2).px};
   background-color: ${colors.listItem};
   width: 100%;
+`;
+
+export const ListItemHeader = styled(ListItem)`
+  position: absolute;
+  top: 0;
 `;
 
 const ForwardRefLink = React.forwardRef((props: LinkProps, ref) => (

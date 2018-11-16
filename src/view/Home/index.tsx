@@ -1,5 +1,4 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
 import Baba, { RevealMove } from 'yubaba';
 import { Container } from './styled';
 import { ListItemLink, Logo } from '../common/Elements';
