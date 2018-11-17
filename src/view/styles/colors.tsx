@@ -19,3 +19,4 @@ export const listItem = b800;
 export const card = b600;
 export const text = white;
 export const logo = white;
+export const userStrip = b700;

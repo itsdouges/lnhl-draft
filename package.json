@@ -20,6 +20,7 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "emotion": "^9.2.12",
+    "netlify-identity-widget": "^1.4.14",
     "react": "^16.7.0-alpha.2",
     "react-cache": "2.0.0-alpha.1",
     "react-dom": "^16.7.0-alpha.2",

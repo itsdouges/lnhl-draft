@@ -2,6 +2,10 @@ import { css } from 'styled-components';
 
 export const base = 14;
 
+export const small = css`
+  font-size: ${base / 1.4}px;
+`;
+
 export const regular = css`
   font-size: ${base}px;
 `;
