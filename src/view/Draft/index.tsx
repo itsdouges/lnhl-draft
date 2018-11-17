@@ -8,7 +8,7 @@ import { Page, ListItemHeader, Logo, ListItemHeaderPadding } from '../common/Ele
 import { Form } from '../common/Form';
 
 const Draft = () => (
-  <Baba name="reveal-draft">
+  <Baba name="reveal-draft" TIME_TO_WAIT_FOR_NEXT_BABA={2000}>
     <ConcealMove>
       {baba => (
         <Page {...baba}>

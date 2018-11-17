@@ -6,6 +6,10 @@ import { Background } from './styled';
 const LazyHome = React.lazy(() => import('../Home'));
 const LazyDraft = React.lazy(() => import('../Draft'));
 
+// Immediately start loading.
+// yubaba falls over if we defer loading it until later shrug.
+import('../Draft');
+
 const theme = createMuiTheme({
   palette: {
     type: 'dark',

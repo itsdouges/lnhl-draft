@@ -15,7 +15,7 @@ export default [
     id: 'icepractice',
     name: 'icepractice',
     type: 'radiogroup',
-    label: 'How often do you do non-game ON ice practice a week?',
+    label: 'How often do you go to ON ICE practice a week?',
     required: true,
     options: [
       {
@@ -27,7 +27,7 @@ export default [
     id: 'officepractice',
     name: 'officepractice',
     type: 'radiogroup',
-    label: 'How often do you do non-game OFF ice practice a week?',
+    label: 'How often do you do OFF ICE practice a week?',
     required: true,
     options: [
       {
@@ -39,7 +39,7 @@ export default [
     id: 'goals',
     name: 'goals',
     type: 'radiogroup',
-    label: 'How many goals did you get last season?',
+    label: 'How many goals did you score last season?',
     required: true,
     options: [
       {
@@ -57,7 +57,7 @@ export default [
     id: 'assists',
     name: 'assists',
     type: 'radiogroup',
-    label: 'How many assists did you get last season?',
+    label: 'How many assists did you give last season?',
     required: true,
     options: [
       {

@@ -5,7 +5,7 @@ import { ListItemLink, Logo } from '../common/Elements';
 
 const Home = () => (
   <Container>
-    <Baba name="reveal-draft">
+    <Baba name="reveal-draft" TIME_TO_WAIT_FOR_NEXT_BABA={2000}>
       <RevealMove>
         {({ ref, ...baba }) => (
           <ListItemLink to="/draft" ref={ref} {...baba}>
