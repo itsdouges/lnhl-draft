@@ -16,6 +16,7 @@ const white = '#FFFFFF';
 export const background = black;
 export const pageBackground = b900;
 export const listItem = b800;
+export const listItemBorder = b600;
 export const card = b600;
 export const text = white;
 export const logo = white;

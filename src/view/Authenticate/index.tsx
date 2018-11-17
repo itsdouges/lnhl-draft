@@ -1,11 +1,20 @@
-import React, { useState, useLayoutEffect, useCallback } from 'react';
-import netlifyIdentity from 'netlify-identity-widget';
-import Button from '@material-ui/core/Button';
-import { CurrentUser } from './styled';
+import React, { useState, useLayoutEffect, useContext, createContext } from 'react';
+import netlifyIdentity, { User } from 'netlify-identity-widget';
 
 interface AuthenticateProps {
   children: React.ReactElement<{}>;
 }
+
+const UserContext = createContext<User | null>(null);
+
+export const useUser = (): User => {
+  const user = useContext(UserContext);
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  return user;
+};
 
 const Authenticate: React.FunctionComponent<AuthenticateProps> = ({ children }) => {
   const [user, setUser] = useState(() => {
@@ -27,25 +36,8 @@ const Authenticate: React.FunctionComponent<AuthenticateProps> = ({ children }) 
     [false]
   );
 
-  const logout = useCallback(
-    () => {
-      netlifyIdentity.logout();
-      setUser(null);
-      netlifyIdentity.open();
-    },
-    [user]
-  );
-
   if (user) {
-    return (
-      <React.Fragment>
-        {children}
-        <CurrentUser>
-          {user.user_metadata.full_name}
-          <Button onClick={logout}>Logout</Button>
-        </CurrentUser>
-      </React.Fragment>
-    );
+    return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
   }
 
   return null;

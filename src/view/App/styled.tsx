@@ -4,7 +4,7 @@ import * as font from '../styles/font';
 import * as colors from '../styles/colors';
 import * as grid from '../styles/grid';
 
-export const Background = css`
+export const CssReset = css`
   ${reset};
   box-sizing: border-box;
 
