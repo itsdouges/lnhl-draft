@@ -8,6 +8,11 @@ const LazyHome = React.lazy(() => import('../Home'));
 const LazyDraft = React.lazy(() => import('../Draft'));
 const LazyProfile = React.lazy(() => import('../Profile'));
 
+// Preload all routes.
+import('../Home');
+import('../Draft');
+import('../Profile');
+
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
