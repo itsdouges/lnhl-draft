@@ -2,6 +2,7 @@ import { createGlobalStyle as css } from 'styled-components';
 import reset from 'styled-reset';
 import * as font from '../styles/font';
 import * as colors from '../styles/colors';
+import * as grid from '../styles/grid';
 
 export const Background = css`
   ${reset};
@@ -29,6 +30,10 @@ export const Background = css`
 
   h5 {
     ${font.h5};
+  }
+
+  .layout {
+    margin-bottom: ${grid.px};
   }
 
   body {

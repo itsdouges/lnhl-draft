@@ -9,15 +9,15 @@ import * as colors from '../../styles/colors';
  */
 export const Page = styled.main`
   height: 100vh;
-  width: 100vw;
   position: relative;
   background-color: ${colors.pageBackground};
+  overflow: auto;
+`;
 
-  :after {
-    display: block;
-    height: ${grid.multiple(10).px};
-    content: '';
-  }
+export const ListItemHeaderPadding = styled.div.attrs({
+  'aria-hidden': 'true',
+})`
+  height: ${grid.multiple(10).px};
 `;
 
 export const ListItem = styled.div`
